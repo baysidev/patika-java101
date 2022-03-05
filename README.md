@@ -2,4 +2,4 @@
 
 patika.dev tarafından verilen ödev ve alıştırmaların bulunduğu klasör.
 
-This path inclued patika.dev's submissions. 
+This path includes patika.dev's submissions. 
