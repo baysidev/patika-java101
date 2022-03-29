@@ -1,53 +1,36 @@
-package Giris;
-
+package Giris.arrays;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class sayisiralama {
+
+    /*
+    baysidev
+     */
+
     public static void main(String[] args) {
 
-        int sayi1, sayi2, sayi3;
+        Scanner giris = new Scanner(System.in);
+        System.out.print("Dizinin boyutu n : ");
+        int n = giris.nextInt();
+        int[] list = new int[n];
+        System.out.println("Dizinin elemanlarını giriniz :");
 
-        Scanner input = new Scanner(System.in);
-        System.out.print("Birinci sayıyı giriniz: ");
-        sayi1 = input.nextInt();
+        for (int i = 0; i < n; i++){
 
-        System.out.print("İkinci sayıyı giriniz: ");
-        sayi2 = input.nextInt();
-
-        System.out.print("Üçüncü sayıyı giriniz: ");
-        sayi3 = input.nextInt();
-
-        if (sayi1 > sayi2 && sayi1 > sayi3) {
-            if(sayi2 > sayi3){
-                System.out.println(sayi1+ ">" +sayi2+ ">" +sayi3);
-            }
-            else {
-                System.out.println(sayi1+ ">" +sayi3+ ">" +sayi2);
-            }
+            System.out.print(i+1+ ". Elemanı: ");
+            list[i] = giris.nextInt();
 
         }
 
-        if (sayi2 > sayi1 && sayi2 > sayi3) {
-            if(sayi1 > sayi3){
-                System.out.println(sayi2+ ">" +sayi1+ ">" +sayi3);
-            }
-            else {
-                System.out.println(sayi2+ ">" +sayi3+ ">" +sayi1);
-            }
 
-        }
-
-        if (sayi3 > sayi2 && sayi3 > sayi1) {
-            if(sayi2 > sayi1){
-                System.out.println(sayi3+ ">" +sayi2+ ">" +sayi1);
-            }
-            else {
-                System.out.println(sayi3+ ">" +sayi1+ ">" +sayi2);
-            }
-
-        }
-
+        Arrays.sort(list);
+        System.out.println("Sıralama: "+Arrays.toString(list));
 
 
     }
+
+
+
+
 }
